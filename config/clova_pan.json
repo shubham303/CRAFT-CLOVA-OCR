@@ -1,0 +1,19 @@
+{
+    "draw": true,
+    "gpu": true,
+    "recognizer": [{
+        "name": "clova_ai_pan",
+        "lang": "en",
+        "disabled": false,
+        "model_dir": "models/clova_ai/TPS-ResNet-BiLSTM-Attn-Seed1111/",
+        "model_name": "TPS-ResNet-BiLSTM-Attn-case-sensitive.pth",
+        "params": {
+            "Prediction": "Attn",
+            "Transformation": "TPS",
+            "FeatureExtraction": "ResNet",
+            "SequenceModeling": "BiLSTM",
+            "batch_max_length": 90
+        }
+    }
+    ]
+}

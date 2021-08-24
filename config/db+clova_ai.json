@@ -1,0 +1,43 @@
+{
+    "langs": [
+        "en",
+        "hi"
+    ],
+    "draw": true,
+    "detector": {
+        "name": "db",
+        "params": {
+            "max_input_size": 736,
+            "model_path": "models/pytorch_ocr/db_mbv3_icdar2015withconfig.pth"
+        }
+    },
+    "recognizer": [{
+        "name": "clova_ai",
+        "lang": "en",
+        "disabled": false,
+        "model_dir": "models/clova_ai/TPS-ResNet-BiLSTM-Attn-Seed1111",
+        "model_name": "best_accuracy.pth",
+        "params": {
+            "Prediction": "Attn",
+            "Transformation": "TPS",
+            "FeatureExtraction": "ResNet",
+            "SequenceModeling": "BiLSTM",
+            "batch_max_length": 90
+        }
+    },
+        {
+        "name": "clova_ai",
+        "lang": "hi",
+        "disabled": false,
+        "model_dir": "models/clova_ai/TPS-ResNet-BiLSTM-Attn-Seed1111",
+        "model_name": "iter_300000.pth",
+        "params": {
+            "Prediction": "Attn",
+            "Transformation": "TPS",
+            "FeatureExtraction": "ResNet",
+            "SequenceModeling": "BiLSTM",
+            "batch_max_length": 90
+        }
+    }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "draw": true,
+    "gpu": true,
+    "detector": {
+        "name": "craft",
+        "params": {
+            "text_threshold": 0.7,
+            "link_threshold": 0.4,
+            "low_text": 0.4,
+            "cuda": true,
+            "long_size": 1280
+        }
+    },
+    "recognizer": [{
+        "name": "clova_ai",
+        "lang": "en",
+        "disabled": false,
+        "model_dir": "models/clova_ai/TPS-ResNet-BiLSTM-Attn-Seed1111",
+        "model_name": "TPS-ResNet-BiLSTM-Attn-case-sensitive.pth",
+        "params": {
+            "Prediction": "Attn",
+            "Transformation": "TPS",
+            "FeatureExtraction": "ResNet",
+            "SequenceModeling": "BiLSTM",
+            "batch_max_length": 90
+        }
+    },
+        {
+        "name": "clova_ai",
+        "lang": "hi",
+        "disabled": false,
+        "model_dir": "models/clova_ai/TPS-ResNet-BiLSTM-Attn-Seed1111",
+        "model_name": "iter_300000.pth",
+        "params": {
+            "Prediction": "Attn",
+            "Transformation": "TPS",
+            "FeatureExtraction": "ResNet",
+            "SequenceModeling": "BiLSTM",
+            "batch_max_length": 90
+        }
+    }
+    ]
+}
