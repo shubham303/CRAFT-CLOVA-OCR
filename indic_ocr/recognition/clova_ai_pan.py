@@ -76,6 +76,8 @@ class ClovaAI_Pan_Recognizer(RecognizerBase):
 		self.model.eval()
 		return
 	
+	#todo this is redundant function. similar character loading functionality is available in utils.py in clova text
+	# recognition.
 	def load_characters(self, model_dir):
 		self.opt.character = []
 		if 'en' == self.lang:
@@ -84,6 +86,7 @@ class ClovaAI_Pan_Recognizer(RecognizerBase):
 			self.opt.character = string.printable[:-6]
 			#self.opt.character = "0123456789abcdefghijklmnopqrstuvwxyz"
 		if "hi" == self.lang:
+			
 			self.opt.character =['-', 'अ', 'आ', 'इ', 'ई', 'उ', 'ऊ', 'ऋ', 'ए', 'ऐ', 'ओ', 'औ', 'क', 'ख', 'ग', 'घ', 'ङ', 'च', 'छ', 'ज', 'झ', 'ञ', 'ट', 'ठ', 'ड', 'ढ', 'ण', 'त', 'थ', 'द', 'ध', 'न', 'प', 'फ', 'ब', 'भ', 'म', 'य', 'र', 'ल', 'व', 'श', 'ष', 'स', 'ह', 'ा', 'ि', 'ी', 'ु', 'ू', 'ृ', 'े', 'ै', 'ो', 'ौ'] #self.opt.character = [unichr(s) for s in range(0x900, 0x980)]
 		# elf.opt.character.append('\u200d')
 		# self.opt.character.append('\u200c')
